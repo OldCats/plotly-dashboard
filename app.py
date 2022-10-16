@@ -4,7 +4,10 @@
 from dash import Dash, dcc, html
 import plotly.express as px
 import pandas as pd
+import dash_bootstrap_components as dbc
 
+
+app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 app = Dash(__name__)
 
 colors = {
@@ -28,8 +31,9 @@ fig.update_layout(
     font_color=colors['text']
 )
 
-app.layout = html.Div(style={'backgroundColor': colors['background']}, children=[
-    html.H1(
+app.layout = dbc.Container(
+    [
+       html.H1(
         children='Hello Dash',
         style={
             'textAlign': 'center',
