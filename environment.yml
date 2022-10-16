@@ -8,6 +8,8 @@ dependencies:
   - nbserverproxy
   - pip
   - pip:
+    - jupyterlab
+    - ipywidgets
     - jupyter-server-proxy
     - jupyter-dash
     - dash==2.6.1
