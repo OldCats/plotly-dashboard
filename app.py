@@ -8,7 +8,6 @@ import dash_bootstrap_components as dbc
 
 
 app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
-app = Dash(__name__)
 
 colors = {
     'background': 'white',
@@ -34,7 +33,7 @@ fig.update_layout(
 app.layout = dbc.Container(
     [
        html.H1(
-        children='Hello Dash',
+        children='Reports and Statistics',
         style={
             'textAlign': 'center',
             'color': colors['text']
@@ -46,11 +45,18 @@ app.layout = dbc.Container(
         'color': colors['text']
     }),
 
-    dcc.Graph(
-        id='example-graph-2',
-        figure=fig
-    )
-])
+    dbc.Row(
+            [
+                dbc.Col(dcc.Graph(id="example-graph-1", figure=fig), md=4),
+                dbc.Col(dcc.Graph(id="example-graph-2", figure=fig), md=4),
+                dbc.Col(dcc.Graph(id="example-graph-3", figure=fig), md=4),
+            ],
+            align="center",
+        ),
+],
+fluid=True,
+)
+
 
 if __name__ == '__main__':
     app.run_server(debug=True, host='127.0.0.1')
