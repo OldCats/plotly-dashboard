@@ -8,8 +8,8 @@ import pandas as pd
 app = Dash(__name__)
 
 colors = {
-    'background': '#111111',
-    'text': '#7FDBFF'
+    'background': 'white',
+    'text': 'black'
 }
 
 # assume you have a "long-form" data frame
