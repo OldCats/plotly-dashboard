@@ -1,0 +1,20 @@
+name: dash-plotly
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - pandas
+  - numpy
+  - nbserverproxy
+  - pip
+  - pip:
+    - jupyter-server-proxy
+    - jupyter-dash
+    - dash==2.6.1
+    - dash-auth==1.4.1
+    - dash-core-components==2.0.0
+    - dash-html-components==2.0.0
+    - dash-bootstrap_components==1.2.1
+    - dash-renderer==1.9.1
+    - dash-table==5.0.0
+    - plotly==5.10.0
